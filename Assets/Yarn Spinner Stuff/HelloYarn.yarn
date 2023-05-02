@@ -1,0 +1,12 @@
+﻿title: Start
+tags:
+---
+<<setsprite Canvas Haku6 sprite>>
+Haku: ... What a weird dream... 
+Haku: I haven't thought about him in a while.
+<<disableSprite Canvas sprite>>
+===
+title: Chest
+---
+You recieved some money.
+===

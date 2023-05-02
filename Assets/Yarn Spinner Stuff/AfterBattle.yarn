@@ -1,0 +1,12 @@
+﻿title: Start
+tags:
+---
+<<setsprite Canvas Haku2 sprite>>
+Haku: What the heck was that??
+Haku: It kind of reminds me of...
+Haku: ...
+<<setsprite Canvas Haku6 sprite>>
+Haku: No, I'm probably just imagining things. Experiments run loose on the daily. It was probably just some weirdo's side project.
+Haku: Since I'm here already, I guess I'll head over to the next town for now.
+<<disableSprite Canvas sprite>>
+===

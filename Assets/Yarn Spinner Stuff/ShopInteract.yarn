@@ -1,0 +1,103 @@
+﻿title: Start
+tags:
+---
+<<setsprite Canvas Haku6 sprite>>
+Haku: I don't really have much to do today...
+Haku: Let's just look around first.
+<<set $money to 50>>
+<<disableSprite Canvas sprite>>
+===
+title: FoodStart
+---
+
+Employee: Hello! How can I help you?
+->Buy
+	Employee: What can I get you today?
+	->Pizza - 15G
+		<<if $money >= 15>>
+			Employee: Here you go! That'll be 15G.
+			You paid 15G. Pizza was added to your inventory.
+			<<set $money to $money - 15>>
+			You have {$money}G left.
+		<<else>>
+			You don't have enough money.
+		<<endif>>
+	->Burger - 15G
+		<<if $money >= 15>>
+			Employee: Here you go! That'll be 15G.
+			You paid 15G. Burger was added to your inventory.
+			<<set $money to $money - 15>>
+			You have {$money}G left.
+		<<else>>
+			You don't have enough money.
+		<<endif>>
+	->Soda - 5G
+		<<if $money >= 5>>
+			Employee: Here you go! That'll be 5G.
+			You paid 5G. Soda was added to your inventory.
+			<<set $money to $money - 5>>
+			You have {$money}G left.
+		<<else>>
+			You don't have enough money.
+		<<endif>>
+	->Exit
+		Employee: Okay, have a nice day!
+->Exit
+	Employee: Okay, have a nice day!
+
+===
+
+title: ItemStart
+---
+Employee: Hello! How can I help you?
+->Buy
+	Employee: What can I get you today?
+	->Potion - 10G
+		<<if $money >= 10>>
+			Employee: Here you go! That'll be 10G.
+			You paid 10G. Potion was added to your inventory.
+			<<set $money to $money - 10>>
+			You have {$money}G left.
+		<<else>>
+			You don't have enough money.
+		<<endif>>
+	->Antidote - 15G
+		<<if $money >= 15>>
+			Employee: Here you go! That'll be 15G.
+			You paid 15G. Antidote was added to your inventory.
+			<<set $money to $money - 15>>
+			You have {$money}G left.
+		<<else>>
+			You don't have enough money.
+		<<endif>>
+	->Knife - 25G
+		<<if $money >= 25>>
+			Employee: Here you go! That'll be 25G.
+			You paid 25G. Knife was added to your inventory.
+			<<set $money to $money - 25>>
+			You have {$money}G left.
+		<<else>>
+			You don't have enough money.
+		<<endif>>
+	->Exit
+		Employee: Okay, have a nice day!
+->Exit
+	Employee: Okay, have a nice day!
+===
+
+title:GoBattle
+---
+<<setsprite Canvas Haku4 sprite>>
+Haku: ... What was that?
+<<setsprite Canvas Haku6 sprite>>
+Haku: It looks like...
+Haku: Should I go investigate?
+->Yes
+	Haku: It's not like I have anything better to do.
+	<<disableSprite Canvas sprite>>
+	<<move GoBattle Battle>>
+
+->No
+	Haku: I'd rather not. It looks like a hassle.
+	<<disableSprite Canvas sprite>>
+===
